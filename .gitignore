@@ -30,3 +30,5 @@ __pycache__/
 
 #remove from github due to large file size, but keep locally for development
 Project_Full_Presentation.pptx
+Project_Full_Presentation.pptx.zip
+data/models/rf_optuna_cpu.pkl
