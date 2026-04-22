@@ -1,0 +1,484 @@
+{
+  "model_performance": {
+    "cpu": {
+      "naive_persistence": {
+        "rmse": 43.1547,
+        "mae": 39.0573,
+        "mape": 95.941,
+        "train_time_s": 0.0,
+        "latency_ms": 0.0,
+        "throughput_rps": 7659430212.69,
+        "model_size_mb": 0.0
+      },
+      "moving_average": {
+        "rmse": 43.1173,
+        "mae": 39.0218,
+        "mape": 95.849,
+        "train_time_s": 0.0,
+        "latency_ms": 0.0,
+        "throughput_rps": 8411318725.66,
+        "model_size_mb": 0.0
+      },
+      "xgboost": {
+        "rmse": 8.6887,
+        "mae": 6.0797,
+        "mape": 15.1921,
+        "train_time_s": 3.3,
+        "latency_ms": 1.906,
+        "throughput_rps": 1074673.07,
+        "model_size_mb": 0.55
+      },
+      "random_forest": {
+        "rmse": 9.1561,
+        "mae": 6.3268,
+        "mape": 15.7098,
+        "train_time_s": 14.75,
+        "latency_ms": 48.23,
+        "throughput_rps": 42463.28,
+        "model_size_mb": 34.72
+      },
+      "lstm": {
+        "rmse": 8.5572,
+        "mae": 6.2125,
+        "mape": 16.5565,
+        "train_time_s": 259.43,
+        "latency_ms": 51.693,
+        "throughput_rps": 39618.69,
+        "model_size_mb": 0.24
+      }
+    },
+    "memory": {
+      "naive_persistence": {
+        "rmse": 88.38,
+        "mae": 86.9375,
+        "mape": 98.7119,
+        "train_time_s": 0.0,
+        "latency_ms": 0.0,
+        "throughput_rps": 4921350830.24,
+        "model_size_mb": 0.0
+      },
+      "moving_average": {
+        "rmse": 88.38,
+        "mae": 86.9375,
+        "mape": 98.7119,
+        "train_time_s": 0.0,
+        "latency_ms": 0.0,
+        "throughput_rps": 6826848814.07,
+        "model_size_mb": 0.0
+      },
+      "xgboost": {
+        "rmse": 2.029,
+        "mae": 1.4988,
+        "mape": 1.698,
+        "train_time_s": 3.51,
+        "latency_ms": 3.015,
+        "throughput_rps": 679190.06,
+        "model_size_mb": 0.53
+      },
+      "random_forest": {
+        "rmse": 2.4674,
+        "mae": 1.8733,
+        "mape": 2.1255,
+        "train_time_s": 8.8,
+        "latency_ms": 31.154,
+        "throughput_rps": 65738.86,
+        "model_size_mb": 14.54
+      },
+      "lstm": {
+        "rmse": 2.9917,
+        "mae": 2.2629,
+        "mape": 3.2364,
+        "train_time_s": 241.56,
+        "latency_ms": 50.597,
+        "throughput_rps": 40477.04,
+        "model_size_mb": 0.24
+      }
+    }
+  },
+  "results_tables": {
+    "cpu": [
+      {
+        "Model": "Lstm",
+        "Target": "Cpu",
+        "RMSE (%)": 8.5572,
+        "MAE (%)": 6.2125,
+        "MAPE (%)": 16.5565,
+        "Train Time (s)": 259.43,
+        "Latency (ms)": 51.693,
+        "Throughput (pred/s)": 39618.69,
+        "Model Size (MB)": 0.24
+      },
+      {
+        "Model": "Xgboost",
+        "Target": "Cpu",
+        "RMSE (%)": 8.6887,
+        "MAE (%)": 6.0797,
+        "MAPE (%)": 15.1921,
+        "Train Time (s)": 3.3,
+        "Latency (ms)": 1.906,
+        "Throughput (pred/s)": 1074673.07,
+        "Model Size (MB)": 0.55
+      },
+      {
+        "Model": "Random Forest",
+        "Target": "Cpu",
+        "RMSE (%)": 9.1561,
+        "MAE (%)": 6.3268,
+        "MAPE (%)": 15.7098,
+        "Train Time (s)": 14.75,
+        "Latency (ms)": 48.23,
+        "Throughput (pred/s)": 42463.28,
+        "Model Size (MB)": 34.72
+      },
+      {
+        "Model": "Moving Average",
+        "Target": "Cpu",
+        "RMSE (%)": 43.1173,
+        "MAE (%)": 39.0218,
+        "MAPE (%)": 95.849,
+        "Train Time (s)": 0.0,
+        "Latency (ms)": 0.0,
+        "Throughput (pred/s)": 8411318725.66,
+        "Model Size (MB)": 0.0
+      },
+      {
+        "Model": "Naive Persistence",
+        "Target": "Cpu",
+        "RMSE (%)": 43.1547,
+        "MAE (%)": 39.0573,
+        "MAPE (%)": 95.941,
+        "Train Time (s)": 0.0,
+        "Latency (ms)": 0.0,
+        "Throughput (pred/s)": 7659430212.69,
+        "Model Size (MB)": 0.0
+      }
+    ],
+    "memory": [
+      {
+        "Model": "Xgboost",
+        "Target": "Memory",
+        "RMSE (%)": 2.029,
+        "MAE (%)": 1.4988,
+        "MAPE (%)": 1.698,
+        "Train Time (s)": 3.51,
+        "Latency (ms)": 3.015,
+        "Throughput (pred/s)": 679190.06,
+        "Model Size (MB)": 0.53
+      },
+      {
+        "Model": "Random Forest",
+        "Target": "Memory",
+        "RMSE (%)": 2.4674,
+        "MAE (%)": 1.8733,
+        "MAPE (%)": 2.1255,
+        "Train Time (s)": 8.8,
+        "Latency (ms)": 31.154,
+        "Throughput (pred/s)": 65738.86,
+        "Model Size (MB)": 14.54
+      },
+      {
+        "Model": "Lstm",
+        "Target": "Memory",
+        "RMSE (%)": 2.9917,
+        "MAE (%)": 2.2629,
+        "MAPE (%)": 3.2364,
+        "Train Time (s)": 241.56,
+        "Latency (ms)": 50.597,
+        "Throughput (pred/s)": 40477.04,
+        "Model Size (MB)": 0.24
+      },
+      {
+        "Model": "Naive Persistence",
+        "Target": "Memory",
+        "RMSE (%)": 88.38,
+        "MAE (%)": 86.9375,
+        "MAPE (%)": 98.7119,
+        "Train Time (s)": 0.0,
+        "Latency (ms)": 0.0,
+        "Throughput (pred/s)": 4921350830.24,
+        "Model Size (MB)": 0.0
+      },
+      {
+        "Model": "Moving Average",
+        "Target": "Memory",
+        "RMSE (%)": 88.38,
+        "MAE (%)": 86.9375,
+        "MAPE (%)": 98.7119,
+        "Train Time (s)": 0.0,
+        "Latency (ms)": 0.0,
+        "Throughput (pred/s)": 6826848814.07,
+        "Model Size (MB)": 0.0
+      }
+    ]
+  },
+  "multi_horizon": {
+    "cpu": {
+      "10 min": {
+        "rmse": 6.9766,
+        "mae": 4.877,
+        "mape": 12.4315
+      },
+      "30 min": {
+        "rmse": 8.6392,
+        "mae": 6.0593,
+        "mape": 15.1795
+      },
+      "60 min": {
+        "rmse": 9.47,
+        "mae": 6.5456,
+        "mape": 16.3103
+      }
+    },
+    "memory": {
+      "10 min": {
+        "rmse": 1.4102,
+        "mae": 0.9755,
+        "mape": 1.097
+      },
+      "30 min": {
+        "rmse": 2.0055,
+        "mae": 1.4742,
+        "mape": 1.6529
+      },
+      "60 min": {
+        "rmse": 2.3423,
+        "mae": 1.7445,
+        "mape": 1.9618
+      }
+    }
+  },
+  "wilcoxon": {
+    "cpu": {
+      "xgboost_vs_random_forest": {
+        "W": 1211862594.5,
+        "p_value": 0.0,
+        "significant_at_0.05": true
+      },
+      "xgboost_vs_lstm": {
+        "W": 1143180616.0,
+        "p_value": 0.0,
+        "significant_at_0.05": true
+      },
+      "random_forest_vs_lstm": {
+        "W": 1094148967.0,
+        "p_value": 0.0,
+        "significant_at_0.05": true
+      }
+    },
+    "memory": {
+      "xgboost_vs_random_forest": {
+        "W": 909757290.0,
+        "p_value": 0.0,
+        "significant_at_0.05": true
+      },
+      "xgboost_vs_lstm": {
+        "W": 851562758.5,
+        "p_value": 0.0,
+        "significant_at_0.05": true
+      },
+      "random_forest_vs_lstm": {
+        "W": 1004576939.0,
+        "p_value": 0.0,
+        "significant_at_0.05": true
+      }
+    }
+  },
+  "cross_cloud": {
+    "cpu": [
+      {
+        "Dataset": "Alibaba",
+        "XGBoost": 8.8384,
+        "Random Forest": 9.0318,
+        "Shared Features": 23
+      },
+      {
+        "Dataset": "Azure",
+        "XGBoost": 19.0952,
+        "Random Forest": 25.7255,
+        "Shared Features": 23
+      },
+      {
+        "Dataset": "Google",
+        "XGBoost": 8.6508,
+        "Random Forest": 13.2804,
+        "Shared Features": 23
+      }
+    ],
+    "memory": [
+      {
+        "Dataset": "Alibaba",
+        "XGBoost": 3.4674,
+        "Random Forest": 6.058,
+        "Shared Features": 23
+      },
+      {
+        "Dataset": "Azure",
+        "XGBoost": 56.0438,
+        "Random Forest": 53.8435,
+        "Shared Features": 23
+      },
+      {
+        "Dataset": "Google",
+        "XGBoost": 10.1191,
+        "Random Forest": 15.3969,
+        "Shared Features": 23
+      }
+    ]
+  },
+  "transfer_learning": {
+    "cpu": [
+      {
+        "Provider": "Azure",
+        "Zero-shot RMSE": 19.0952,
+        "Fine-tuned RMSE": 14.6455,
+        "Improvement": 4.4497,
+        "Fine-tune samples": 13989
+      },
+      {
+        "Provider": "Google",
+        "Zero-shot RMSE": 8.6508,
+        "Fine-tuned RMSE": 1.0554,
+        "Improvement": 7.5954,
+        "Fine-tune samples": 10489
+      }
+    ],
+    "memory": [
+      {
+        "Provider": "Azure",
+        "Zero-shot RMSE": 56.0438,
+        "Fine-tuned RMSE": 11.1127,
+        "Improvement": 44.9311,
+        "Fine-tune samples": 13989
+      },
+      {
+        "Provider": "Google",
+        "Zero-shot RMSE": 10.1191,
+        "Fine-tuned RMSE": 2.3489,
+        "Improvement": 7.7702,
+        "Fine-tune samples": 10489
+      }
+    ]
+  },
+  "cost_analysis_cpu": {
+    "xgboost": {
+      "model": "xgboost",
+      "mean_daily_saving_eur": 0.2,
+      "ci_lower": 0.0,
+      "ci_upper": 5.53,
+      "pct_windows_proactive_cheaper": 3.6
+    },
+    "random_forest": {
+      "model": "random_forest",
+      "mean_daily_saving_eur": 0.2,
+      "ci_lower": 0.0,
+      "ci_upper": 5.53,
+      "pct_windows_proactive_cheaper": 3.6
+    },
+    "lstm": {
+      "model": "lstm",
+      "mean_daily_saving_eur": 0.2,
+      "ci_lower": 0.0,
+      "ci_upper": 5.53,
+      "pct_windows_proactive_cheaper": 3.6
+    }
+  },
+  "cost_analysis_memory": {
+    "xgboost": {
+      "model": "xgboost",
+      "mean_daily_saving_eur": 0.72,
+      "ci_lower": -4.61,
+      "ci_upper": 0.92,
+      "pct_windows_proactive_cheaper": 92.3
+    },
+    "random_forest": {
+      "model": "random_forest",
+      "mean_daily_saving_eur": 0.7,
+      "ci_lower": -4.61,
+      "ci_upper": 0.92,
+      "pct_windows_proactive_cheaper": 92.3
+    },
+    "lstm": {
+      "model": "lstm",
+      "mean_daily_saving_eur": 0.72,
+      "ci_lower": -4.61,
+      "ci_upper": 0.92,
+      "pct_windows_proactive_cheaper": 92.3
+    }
+  },
+  "learning_curves": {
+    "cpu": {
+      "fraction": [
+        0.1,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "xgb": [
+        10.3991,
+        9.5645,
+        8.568,
+        8.5358,
+        8.6392
+      ],
+      "rf": [
+        10.7032,
+        9.7381,
+        9.4297,
+        8.8888,
+        9.29
+      ],
+      "xgb_train_s": [
+        0.881,
+        0.829,
+        1.836,
+        2.177,
+        2.495
+      ],
+      "rf_train_s": [
+        2.724,
+        4.953,
+        9.486,
+        15.267,
+        18.889
+      ]
+    },
+    "memory": {
+      "fraction": [
+        0.1,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "xgb": [
+        11.4658,
+        10.7886,
+        3.5466,
+        2.0079,
+        2.0055
+      ],
+      "rf": [
+        10.8081,
+        11.1345,
+        4.6396,
+        2.0143,
+        2.0357
+      ],
+      "xgb_train_s": [
+        0.914,
+        1.319,
+        1.797,
+        2.301,
+        2.625
+      ],
+      "rf_train_s": [
+        2.186,
+        6.079,
+        9.428,
+        13.748,
+        17.979
+      ]
+    }
+  }
+}

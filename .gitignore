@@ -1,0 +1,28 @@
+# Raw telemetry and extracted source archives
+data/raw/
+
+# Large training artifacts that are not needed for the dashboard
+data/processed/*_train.csv
+data/processed/*_val.csv
+data/processed/*_raw_loaded.csv
+data/models/*optuna*.pkl
+data/models/ensemble_*.pkl
+
+# Keep the smaller dashboard-required artifacts
+!data/processed/*_test.csv
+!data/processed/*_feature_cols.pkl
+!data/processed/*_selected_features_*.pkl
+!data/processed/*_scaler.pkl
+!data/models/xgboost_*.pkl
+!data/models/rf_*.pkl
+!data/models/lstm_*.pt
+!data/results/
+!data/upload_samples/
+
+# Notebook / OS / temporary files
+.ipynb_checkpoints/
+~$*.pptx
+~$*.docx
+*.pyc
+__pycache__/
+.DS_Store
