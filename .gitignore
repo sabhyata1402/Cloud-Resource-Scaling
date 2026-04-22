@@ -5,8 +5,10 @@ data/raw/
 data/processed/*_train.csv
 data/processed/*_val.csv
 data/processed/*_raw_loaded.csv
-data/models/*optuna*.pkl
-data/models/ensemble_*.pkl
+data/models/
+data/models/rf_*
+# data/models/ensemble_*.pkl
+data/models/rf_cpu.pkl
 
 # Keep the smaller dashboard-required artifacts
 !data/processed/*_test.csv
@@ -14,7 +16,6 @@ data/models/ensemble_*.pkl
 !data/processed/*_selected_features_*.pkl
 !data/processed/*_scaler.pkl
 !data/models/xgboost_*.pkl
-!data/models/rf_*.pkl
 !data/models/lstm_*.pt
 !data/results/
 !data/upload_samples/
@@ -26,3 +27,6 @@ data/models/ensemble_*.pkl
 *.pyc
 __pycache__/
 .DS_Store
+
+#remove from github due to large file size, but keep locally for development
+Project_Full_Presentation.pptx
