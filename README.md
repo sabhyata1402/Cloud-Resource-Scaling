@@ -1,6 +1,6 @@
-# H9MLAI — Intelligent Proactive Resource Forecasting for Cloud-Native Systems
+# Intelligent Proactive Resource Forecasting for Cloud-Native Systems
 
-**Sabhyata Kumari | X24283142 | MSc Artificial Intelligence, NCI 2026**
+Public deployment repository for the Streamlit dashboard version of the project.
 
 ## Project Overview
 
@@ -9,55 +9,63 @@ This project implements and evaluates three ML models (XGBoost, Random Forest, L
 ## Repository Structure
 
 ```
-Notebooks/
-├── H9MLAI_Complete_Pipeline_FIXED.ipynb   # Main notebook (138 cells)
-├── app.py                                  # Streamlit dashboard (6 tabs)
-├── deployment_utils.py                     # Model loading utilities
-├── requirements.txt                        # Python dependencies
-├── Dockerfile                              # Docker deployment
-├── CLAUDE.md                               # Development guide
-├── README.md                               # This file
+cloud-resource-forecasting/
+├── app.py                        # Streamlit dashboard entry point
+├── deployment_utils.py           # Model loading and inference helpers
+├── requirements.txt              # Python dependencies
+├── Dockerfile                    # Optional container build
+├── README.md                     # This file
 └── data/
-    ├── raw/                                # Original datasets
-    ├── processed/                          # Cleaned CSVs, feature files
-    ├── models/                             # Saved model artifacts
-    ├── results/                            # Results JSON, SHAP values
-    └── Graph/                              # All saved figures
+    ├── processed/                # Test splits, feature files, scalers
+    ├── models/                   # Saved model artifacts used by the app
+    ├── results/                  # JSON / pickle outputs for the dashboard
+    └── upload_samples/           # Sample CSV for dashboard demos
 ```
 
 ## Quick Start
 
-### Option 1: Local Setup
+### Option 1: Run the dashboard locally
 
 ```bash
-cd Notebooks
+cd cloud-resource-forecasting
 python3.11 -m venv .venv
 source .venv/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt
 
-# Install Jupyter kernel
-python -m ipykernel install --user --name h9mlai --display-name "Python (h9mlai)"
-
-# Run the notebook to train models and generate artifacts
-jupyter notebook H9MLAI_Complete_Pipeline_FIXED.ipynb
-
 # Launch the Streamlit dashboard
 streamlit run app.py
 ```
 
-### Option 2: Docker
+### Option 2: Reproduce the training notebook
+
+The original training workflow is preserved in `Resource_Forecasting_Complete_Pipeline.ipynb`. It is not required for deployment, but it documents the full modelling pipeline used to generate the saved artifacts.
+
+### Option 3: Docker
 
 ```bash
-cd Notebooks
+cd cloud-resource-forecasting
 docker build -t h9mlai-forecasting .
 docker run -p 8501:8501 h9mlai-forecasting
 # Open http://localhost:8501
 ```
 
+## Streamlit Cloud Deployment
+
+To make the app available to anyone, deploy it from this GitHub repository to Streamlit Community Cloud.
+
+1. Push this repository to GitHub.
+2. Go to Streamlit Community Cloud and sign in with GitHub.
+3. Click **Create app**.
+4. Select this repository and the `main` branch.
+5. Set the entry file to `app.py`.
+6. Choose a short app URL such as `cloud-resource-scaling`.
+
+The app will be available at a public `streamlit.app` URL once deployment completes.
+
 ## Notebook Execution Order
 
-The notebook must be run sequentially. Key sections:
+The original notebook is intended to be run sequentially. Key sections:
 
 | Section | Content | Output |
 |---------|---------|--------|
@@ -119,3 +127,7 @@ The dashboard (`app.py`) provides 6 interactive tabs:
 - Docker container for environment reproducibility
 - `requirements.txt` with pinned minimum versions
 - This repository is intended to stay GitHub-friendly: the raw 13 GB telemetry and large training splits are excluded, while the dashboard-required test splits, model files, results, and sample inputs are kept.
+
+## Data Note
+
+The raw public cloud trace files are large and are not committed to this repository. The dashboard uses the saved processed artifacts and model files under `data/` for inference and visualisation.
