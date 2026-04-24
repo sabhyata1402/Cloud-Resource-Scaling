@@ -1,4 +1,4 @@
-# Intelligent Proactive Resource Forecasting for Cloud-Native Systems
+Intelligent Proactive Resource Forecasting for Cloud-Native Systems
 
 Public deployment repository for the Streamlit dashboard version of the project.
 
