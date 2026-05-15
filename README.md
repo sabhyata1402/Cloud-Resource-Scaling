@@ -1,25 +1,14 @@
 Intelligent Proactive Resource Forecasting for Cloud-Native Systems
 
+<img width="1629" height="841" alt="image" src="https://github.com/user-attachments/assets/33e6a811-d651-47ff-ac32-a0285aa1bdd5" />
+
+
 Public deployment repository for the Streamlit dashboard version of the project.
 
 ## Project Overview
 
 This project implements and evaluates three ML models (XGBoost, Random Forest, LSTM) for proactive CPU and memory resource forecasting in cloud-native environments. Models are trained on the Alibaba 2018 Cluster Trace and evaluated for cross-cloud generalisation on Azure and Google datasets.
 
-## Repository Structure
-
-```
-cloud-resource-forecasting/
-├── app.py                        # Streamlit dashboard entry point
-├── deployment_utils.py           # Model loading and inference helpers
-├── requirements.txt              # Python dependencies
-├── Dockerfile                    # Optional container build
-├── README.md                     # This file
-└── data/
-    ├── processed/                # Test splits, feature files, scalers
-    ├── models/                   # Saved model artifacts used by the app
-    ├── results/                  # JSON / pickle outputs for the dashboard
-    └── upload_samples/           # Sample CSV for dashboard demos
 ```
 
 ## Quick Start
